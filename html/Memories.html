@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+ <title>Happy Birthday</title>
+ <style type="text/css">
+    h1{
+     text-align: center;
+    }
+    #box{
+     width:500px;
+     height: 60px;
+     background-color: #6e7cfc;
+     text-align: center;
+     line-height: 40px;
+     font-size: 40px;
+     color: white;
+     margin: 0 auto;
+    }
+   </style>
+ <link rel="icon" type="image/x-icon" href="../img/河.png">
+ <link rel="stylesheet" href="../css/jquery.fullPage.css" type="text/css"/>
+ <link rel="stylesheet" href="../css/memories.css" type="text/css"/>
+ <link rel="stylesheet" href="../css/bubbles.css" type="text/css" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        window.onload = function(){
+         setInterval(NowTime,1000);
+         NowTime();
+         function NowTime(){
+          var box = document.getElementById('box');
+          var time_start = new Date('2002','9','10');//开始时间，注意！！！如果从8月15开始，月份就是7月15
+             var clock_start = time_start.getTime();
+             function get_time_spent() {
+                 var time_now = new Date();
+                 return ((time_now.getTime() - clock_start));
+             }
+             var i_total_secs = Math.round(get_time_spent());
+      
+      //计算出相差天数
+      var days = Math.floor(i_total_secs / (24 * 3600 * 1000))
+     
+      //计算出小时数
+      var leave1 = i_total_secs % (24 * 3600 * 1000)    //计算天数后剩余的毫秒数
+      var hours = Math.floor(leave1 / (3600 * 1000))
+      //计算相差分钟数
+      var leave2 = leave1 % (3600 * 1000)        //计算小时数后剩余的毫秒数
+      var minutes = Math.floor(leave2 / (60 * 1000))
+      //计算相差秒数
+      var leave3 = leave2 % (60 * 1000)      //计算分钟数后剩余的毫秒数
+      var seconds = Math.round(leave3 / 1000)
+     
+      if (seconds.toString().length == 1) {
+          seconds = '0' + seconds;
+      }
+          var a = new Date();
+          var b = a.getHours();
+          var c = a.getMinutes();
+          var d = a.getSeconds();
+          box.innerHTML =days+"天"+hours+"时"+minutes+"分"+seconds+"秒";
+         };
+         
+         function check(val){
+          if(val < 10){
+           return("0" + val)
+          }else{
+           return(val)
+          }
+         }
+        }
+       </script>
+<div class="bgcolor">
+  <div style="z-index:100;" id="dowebok">
+      <!--第一屏-->
+      <div class="section">
+          <div class="ly-box01">
+            <div class="ly-txt01">
+              <p class="ly-stxt01">小崽种</p>
+              <p class="ly-stxt02">许久不见了</p>
+              <p class="ly-stxt03">或许咱俩这狐朋狗友的关系</p>
+              <p class="ly-stxt04">不需要用逼话去说啥了</p>
+              
+            </div>
+            <div class="ly-txt02">
+                <p class="ly-stxt06">18岁的xzt走向了人生的新路口</p>
+                <p class="ly-stxt07">19岁的乖儿子也不要让我失望</p>
+                <p class="ly-stxt08">发达了说声苟富贵勿相忘</p>
+                <p class="ly-stxt09">平淡了也要记得还有你爸爸</p>
+                <p class="ly-stxt09">活出你想要的样子吧</p>
+              </div>
+        </div>
+      </div>
+
+           <!--第四屏-->
+  
+           <div class="section">
+            <div class="timeline"></div>
+            <div class="timepoint31"></div>
+            <div class="ly-box31">
+                <div align="center" class="ly-txt31">
+                  <s>  是哪个聪明帅气潇洒</s>
+                 <p> 啊呸 爸爸的智障儿子</p>
+                 <p> 记住我的忠告&#8595</p>
+                </div>
+      
+                <div align="center" class="ly-imgbox31">
+                  <img  src="../img/B562FCDA933F199EE04A48A0F7F70398.jpg" width="450">
+                </div>
+            </div>
+            <div class="ly-triangle31"></div>
+  
+            <div class="ly-box32">
+                  <img  src="../img/25A6B79F85C8E6C07C9EE5F7497998CB.jpg" width="400" height="400">
+                 
+            </div>
+            <div class="ly-triangle32"></div>
+        </div>
+  
+      <!--第二屏-->
+
+      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint11"></div>
+          <div class="ly-box11">
+              <div class="ly-txt11">
+         都十九岁了 能不能聪明点 多dou点书咯
+              </div>
+              <div class="ly-imgbox11">
+                <img class="ly-img11" src="../img/FC8D848B4F4BDEFBA77BB59D59A01B81.gif">
+              </div>
+          </div>
+          <div class="ly-triangle11"></div>
+
+          <div class="ly-box12">
+              <div class="ly-txt13">
+              </div>
+              <div class="ly-txt14">
+                 <h1>老子生你养你</h1>
+                 <h1>一把屎一把尿把你喂大</h1>
+                 <div id="box" ></div>
+			     <h1>都这么这么久了咯</h1>
+                 <div align="center">
+                    <img  src="../img/C23416042F8CA88F89DFD2E4AB201353.jpg" width="160" height="160">
+                    <img  src="../img/B2851D8098BCA827A775BB107C4F56F1.jpg" width="160" height="160">
+                 </div>
+              </div>
+          </div>
+          <div class="ly-triangle12"></div>
+      </div>
+
+      <!--第三屏-->
+<!--
+      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint21"></div>
+          <div class="ly-box21">
+              <div class="ly-txt21">
+                  201X-1X-2X
+              </div>
+              <div class="ly-txt22">
+                 <p> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				         <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox21">
+                <img class="ly-img21" src="img/2014.11.26-1.png">
+              </div>
+          </div>
+          <div class="ly-triangle21"></div>
+
+          <div class="ly-box22">
+              <div class="ly-txt23">
+                  201X-1X-1X
+              </div>
+              <div class="ly-txt24">
+                  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+              </div>
+              <div class="ly-imgbox22">
+                <img class="ly-img22" src="img/2014.12.19-1.png">
+              </div>
+          </div>
+          <div class="ly-triangle22"></div>
+
+           <div class="ly-box23">
+              <div class="ly-txt25">
+                  201X-1X-2X
+              </div>
+              <div class="ly-txt26">
+                  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+              </div>
+              <div class="ly-imgbox23">
+                <img class="ly-img23" src="img/2014.12.20-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle23"></div>
+      </div>
+-->
+ 
+  <!--第五屏-->
+  <!--<div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint21"></div>
+          <div class="ly-box52">
+              <div class="ly-txt21">
+                  2015-01-01
+              </div>
+              <div class="ly-txt22">
+                 <p> XXXXXXXXXXXXXXXXXXXXXXXX</p>
+				         <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox21">
+                <img class="ly-img21" src="img/2015.01.01-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle21"></div>
+
+          <div class="ly-box22">
+              <div class="ly-txt23">
+                  201X-0X-1X
+              </div>
+              <div class="ly-txt51">
+                  <p>XXXXXXXXXXXXXXXXXXXXXXXX</p>
+				          <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox22">
+                <img class="ly-img22" src="img/2015.02.19-1.png">
+              </div>
+          </div>
+          <div class="ly-triangle22"></div>
+
+           <div class="ly-box51">
+              <div class="ly-txt25">
+                  201X-0X-1X
+              </div>
+              <div class="ly-txt26">
+                  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p>XXXXXXXXXXXXXXXXXXX</p>
+				  <p>XXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox23">
+                <img class="ly-img23" src="img/2015.04.11-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle23"></div>
+      </div>
+-->
+  <!--第六屏-->
+ <!-- <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint21"></div>
+          <div class="ly-box21">
+              <div class="ly-txt21">
+                  201X-0X-1X
+              </div>
+              <div class="ly-txt22">
+                 <p>XXXXXXXXXXXXXXXXXX</p>
+                 <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                 <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox21">
+                <img class="ly-img21" src="img/2015.05.19-1.PNG">
+              </div>
+          </div>
+          <div class="ly-triangle21"></div>
+
+          <div class="ly-box22">
+              <div class="ly-txt23">
+                  201X-0X-2X
+              </div>
+              <div class="ly-txt24">
+                  <p> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				 <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				 <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox22">
+                <img class="ly-img22" src="img/2015.05.28-1.PNG">
+              </div>
+          </div>
+          <div class="ly-triangle22"></div>
+
+           <div class="ly-box23">
+              <div class="ly-txt25">
+                  201X-0X-2X
+              </div>
+              <div class="ly-txt61">
+                  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				  <p class="wwww1" style="display:none;">你想要的，我能给的，我都会给你。</p>
+              </div>
+              <div class="ly-imgbox61">
+                <img class="ly-img61" src="img/2015.05.29-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle23"></div>
+      </div>
+-->
+      <!--第七屏-->
+      <!-- <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint71"></div>
+          <div class="ly-box21 xx71">
+              <div class="ly-txt21">
+                  201X-0X-3X
+              </div>
+              <div class="ly-txt22">
+                 <p> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox21">
+                <img class="ly-img21" src="img/2015.05.31-1.png">
+              </div>
+          </div>
+          <div class="ly-triangle21 xx72"></div>
+
+          <div class="ly-box71">
+              <div class="ly-txt23">
+                  201X-0X-0X
+              </div>
+              <div class="ly-txt71">
+                  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox71">
+                <img class="ly-img71" src="img/2015.06.02-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle22"></div>
+
+           <div class="ly-box72">
+              <div class="ly-txt25">
+                  201X-0X-1X
+              </div>
+              <div class="ly-txt72">
+                  <p>XXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox72">
+                <img class="ly-img72" src="img/2015.06.15-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle71"></div>
+
+          <div class="ly-box73">
+              <div class="ly-txt25">
+                  201X-0X-1X
+              </div>
+              <div class="ly-txt73">
+                  <p>XXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox73">
+                <img class="ly-img73" src="img/2015.06.17-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle72"></div>
+      </div>
+-->
+      <!--第八屏-->
+ <!--
+      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint11"></div>
+          <div class="ly-box81">
+              <div class="ly-txt11">
+                  201X-0X-1X
+              </div>
+              <div class="ly-txt82">
+                  XXXXXXXXXXXXXXXXXXXXXXXXXX
+              </div>
+              <div class="ly-imgbox81">
+                <img class="ly-img81" src="../img/BEB7342DEA9FFE86790A9BD48ED4D781.gif">
+              </div>
+          </div>
+          <div class="ly-triangle11"></div>
+
+          <div class="ly-box82">
+              <div class="ly-txt13">
+                  2015-06-18
+              </div>
+              <div class="ly-txt84">
+                 <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				 <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				 <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				 <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+				 <p class="wwww1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+          </div>
+          <div class="ly-triangle82"></div>
+      </div>
+-->
+      <!--第九屏-->
+<!--
+<div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint91"></div>
+          <div class="ly-box21 xx91">
+              <div class="ly-txt21">
+                  201X-0X-2X
+              </div>
+              <div class="ly-txt90">
+                 <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox21 xx94">
+                <img class="ly-img21" src="img/2015.06.24-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle21 xx92"></div>
+
+          <div class="ly-box91">
+              <div class="ly-txt23">
+                  201X-0X-2X
+              </div>
+              <div class="ly-txt91">
+                  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox91">
+                <img class="ly-img91" src="img/2015.06.24-3.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle22 xx92"></div>
+
+           <div class="ly-box92">
+              <div class="ly-txt25">
+                  201X-0X-2X
+              </div>
+              <div class="ly-txt92">
+                  <p>XXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox92">
+                <img class="ly-img92" src="img/2015.06.26-1.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle91"></div>
+
+          <div class="ly-box93">
+              <div class="ly-txt25">
+                  201X-0X-2X
+              </div>
+              <div class="ly-txt93">
+                  <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+              <div class="ly-imgbox93">
+                <img class="ly-img93" src="img/2015.06.26-2.jpg">
+              </div>
+          </div>
+          <div class="ly-triangle92"></div>
+      </div>-->
+		<!--第十屏-->
+
+		      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint11"></div>
+          <div class="ly-box81">
+              <div class="ly-txt11">
+                扫二维码有惊喜呀
+              </div>
+              <div class="ly-txt82" style="top:8%">
+                  <p class="wwww1"></p>
+                  <p class="wwww1"></p>
+                  <p class="wwww1"></p>   
+                  <p class="wwww1"></p>
+                  <p class="wwww1"></p>
+                  <p class="wwww1"></p>
+                  <p class="wwww1"></p>
+                  <p class="wwww1"></p>
+                  <img class="ly-img81" src="../img/34__a06ea61ea7745b63df375b56a5cdc768_041d7cb3d0bc94f51503f7a77abac331.png">
+              </div>
+              <div class="ly-imgbox81">
+                <img class="ly-img81" src="../img/42__cfbbe9257bdd6a665119387daf8a362b_7aa540919eee4b060351a0d234281fdc.png">
+              </div>
+          </div>
+          <div class="ly-triangle11"></div>
+
+          <div class="ly-box82">
+              <div class="ly-txt13">
+                 关于作者
+              </div>
+              <div class="ly-txt84">
+                 <p></p>
+				 <h1>你能看到这一段</h1>
+                 <h1></h1>
+                    <h1>证明你和作者关系还不错</h1>
+				 <h1></h1>
+				 <h1>那就不用介绍作者了</h1>
+				 <h1></h1>
+				 <h1>作者人很好 作者在变得更优秀</h1>
+				 <h1></h1>
+				 <h1>别把他忘了</h1>
+				 <h1></h1>
+				 <h1>他希望身边每个人都好好的</h1>
+
+              </div>
+          </div>
+          <div class="ly-triangle82"></div>
+      </div>
+
+       </div>
+  <!--试验-->
+  <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </div>
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/jquery.fullPage.min.js"></script>
+  <!-- <script src="../js/auto-play.js"></script> -->
+  <script src="../js/memories.js"></script>
+  <audio src="../music/1.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
